@@ -28,7 +28,7 @@ export default class Parser extends EventEmitter {
             let overflow = null;
             this.paused = false;
 
-            const stream = fs.createReadStream(this.filename);
+            const stream = fs.createReadStream(this.filename, 'latin1');
 
             this.readBuf = () => {
 
